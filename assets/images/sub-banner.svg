@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="7.812px" height="2.438px" viewBox="0 0 7.812 2.438" enable-background="new 0 0 7.812 2.438" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="-12.526" y="-8.033" width="39.124" height="58.039"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g opacity="0.4" clip-path="url(#SVGID_2_)">
+		<g>
+			<defs>
+				<rect id="SVGID_3_" x="3.932" y="0.253" width="3.832" height="2.272"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_4_)">
+				<defs>
+					<path id="SVGID_5_" d="M7.746,2.525C6.732,1.812,5.113,1.776,3.932,1.773c0-0.757,0-0.764,0-1.521
+						c1.41,0.149,2.539-0.155,3.761,0.354C7.525,1.371,7.838,1.867,7.746,2.525"/>
+				</defs>
+				<clipPath id="SVGID_6_">
+					<use xlink:href="#SVGID_5_"  overflow="visible"/>
+				</clipPath>
+				<defs>
+					<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="3.754" y="-0.188" width="4.261" height="3">
+						<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+					</filter>
+				</defs>
+				<mask maskUnits="userSpaceOnUse" x="3.754" y="-0.188" width="4.261" height="3" id="SVGID_7_">
+					<g filter="url(#Adobe_OpacityMaskFilter)">
+						
+							<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="-974.6323" y1="1472.4453" x2="-974.6123" y2="1472.4453" gradientTransform="matrix(-50.1204 -3.6931 -3.6931 50.1204 -43403.3789 -77397.5078)">
+							<stop  offset="0" style="stop-color:#000000"/>
+							<stop  offset="1" style="stop-color:#FFFFFF"/>
+						</linearGradient>
+						<polygon clip-path="url(#SVGID_6_)" fill="url(#SVGID_8_)" points="7.816,2.812 3.754,2.512 3.954,-0.188 8.016,0.111 						
+							"/>
+					</g>
+				</mask>
+				
+					<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="-974.6328" y1="1472.4453" x2="-974.6128" y2="1472.4453" gradientTransform="matrix(-50.1204 -3.6931 -3.6931 50.1204 -43403.3789 -77397.5078)">
+					<stop  offset="0" style="stop-color:#231F20"/>
+					<stop  offset="1" style="stop-color:#231F20"/>
+				</linearGradient>
+				<polygon clip-path="url(#SVGID_6_)" mask="url(#SVGID_7_)" fill="url(#SVGID_9_)" points="7.816,2.812 3.754,2.512 
+					3.954,-0.188 8.016,0.111 				"/>
+			</g>
+		</g>
+	</g>
+	<g opacity="0.4" clip-path="url(#SVGID_2_)">
+		<g>
+			<defs>
+				<rect id="SVGID_10_" x="0.1" y="0.253" width="3.833" height="2.272"/>
+			</defs>
+			<clipPath id="SVGID_11_">
+				<use xlink:href="#SVGID_10_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_11_)">
+				<defs>
+					<path id="SVGID_12_" d="M0.118,2.525C1.133,1.811,2.75,1.776,3.932,1.773c0-0.757,0-0.764,0-1.521
+						C2.523,0.402,1.394,0.098,0.171,0.607C0.339,1.373,0.024,1.867,0.118,2.525"/>
+				</defs>
+				<clipPath id="SVGID_13_">
+					<use xlink:href="#SVGID_12_"  overflow="visible"/>
+				</clipPath>
+				<defs>
+					<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="-0.154" y="-0.188" width="4.264" height="3">
+						<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+					</filter>
+				</defs>
+				<mask maskUnits="userSpaceOnUse" x="-0.154" y="-0.188" width="4.264" height="3" id="SVGID_14_">
+					<g filter="url(#Adobe_OpacityMaskFilter_1_)">
+						
+							<linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="-968.4873" y1="1472.8965" x2="-968.4673" y2="1472.8965" gradientTransform="matrix(50.1261 -3.6935 3.6935 50.1261 43106.5625 -77406.2578)">
+							<stop  offset="0" style="stop-color:#000000"/>
+							<stop  offset="1" style="stop-color:#FFFFFF"/>
+						</linearGradient>
+						<polygon clip-path="url(#SVGID_13_)" fill="url(#SVGID_15_)" points="0.045,2.812 4.11,2.512 3.911,-0.188 -0.154,0.111 
+													"/>
+					</g>
+				</mask>
+				
+					<linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="-968.4873" y1="1472.8965" x2="-968.4673" y2="1472.8965" gradientTransform="matrix(50.1261 -3.6935 3.6935 50.1261 43106.5625 -77406.2578)">
+					<stop  offset="0" style="stop-color:#231F20"/>
+					<stop  offset="1" style="stop-color:#231F20"/>
+				</linearGradient>
+				<polygon clip-path="url(#SVGID_13_)" mask="url(#SVGID_14_)" fill="url(#SVGID_16_)" points="0.045,2.812 4.11,2.512 
+					3.911,-0.188 -0.154,0.111 				"/>
+			</g>
+		</g>
+	</g>
+	<path clip-path="url(#SVGID_2_)" fill="#B0E2F7" d="M7.738,2.041c-2.518-0.438-5.103-0.437-7.621,0
+		C-0.036,1.5,0.283,0.959,0.148,0.419c2.496-0.491,5.065-0.491,7.559-0.001C7.572,0.959,7.893,1.5,7.738,2.041"/>
+</g>
+<text transform="matrix(0.9913 -0.1314 0.1314 0.9913 1.1816 0.9385)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">T</text>
+<text transform="matrix(0.9926 -0.1212 0.1212 0.9926 1.3838 0.9116)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">h</text>
+<text transform="matrix(0.9939 -0.1107 0.1107 0.9939 1.6006 0.8848)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.9947 -0.1032 0.1032 0.9947 1.8076 0.8638)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9952 -0.0976 0.0976 0.9952 1.9038 0.8521)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">f</text>
+<text transform="matrix(0.996 -0.0889 0.0889 0.996 2.0352 0.8379)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">u</text>
+<text transform="matrix(0.9968 -0.08 0.08 0.9968 2.2524 0.8198)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">t</text>
+<text transform="matrix(0.9975 -0.0711 0.0711 0.9975 2.395 0.8086)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">u</text>
+<text transform="matrix(0.9981 -0.0623 0.0623 0.9981 2.6128 0.7939)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">r</text>
+<text transform="matrix(0.9986 -0.0537 0.0537 0.9986 2.7485 0.7852)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.9989 -0.0462 0.0462 0.9989 2.957 0.7544)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9993 -0.0383 0.0383 0.9993 3.0537 0.7485)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">o</text>
+<text transform="matrix(0.9996 -0.0297 0.0297 0.9996 3.271 0.7402)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">f</text>
+<text transform="matrix(0.9997 -0.024 0.024 0.9997 3.4038 0.7393)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9999 -0.0132 0.0132 0.9999 3.4985 0.7344)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">m</text>
+<text transform="matrix(1 0 0 1 3.8354 0.7349)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">a</text>
+<text transform="matrix(1 0.0085 -0.0085 1 4.0386 0.7305)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">r</text>
+<text transform="matrix(0.9999 0.0168 -0.0168 0.9999 4.1724 0.7319)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">k</text>
+<text transform="matrix(0.9996 0.0269 -0.0269 0.9996 4.3691 0.7349)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.9994 0.0356 -0.0356 0.9994 4.5781 0.7402)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">t</text>
+<text transform="matrix(0.9991 0.0415 -0.0415 0.9991 4.7217 0.7471)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">i</text>
+<text transform="matrix(0.9988 0.0493 -0.0493 0.9988 4.8184 0.75)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">n</text>
+<text transform="matrix(0.9982 0.0602 -0.0602 0.9982 5.0352 0.7603)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">g</text>
+<text transform="matrix(0.9977 0.0681 -0.0681 0.9977 5.2559 0.7739)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9973 0.0728 -0.0728 0.9973 5.3516 0.7808)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">i</text>
+<text transform="matrix(0.9968 0.0795 -0.0795 0.9968 5.4463 0.7876)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">s</text>
+<text transform="matrix(0.9963 0.0861 -0.0861 0.9963 5.6191 0.8013)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9956 0.0938 -0.0938 0.9956 5.7158 0.8096)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">h</text>
+<text transform="matrix(0.9945 0.1043 -0.1043 0.9945 5.9307 0.8301)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.9936 0.1128 -0.1128 0.9936 6.1377 0.8525)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">r</text>
+<text transform="matrix(0.9926 0.1213 -0.1213 0.9926 6.2754 0.8662)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.991 0.1335 -0.1335 0.991 6.5811 0.9053)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9859 -0.1676 0.1676 0.9859 0.373 1.4717)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">W</text>
+<text transform="matrix(0.9881 -0.1541 0.1541 0.9881 0.7197 1.4146)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.9891 -0.1474 0.1474 0.9891 0.9204 1.3843)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">’</text>
+<text transform="matrix(0.99 -0.1408 0.1408 0.99 0.9961 1.3711)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">v</text>
+<text transform="matrix(0.9914 -0.131 0.131 0.9914 1.189 1.3452)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.9923 -0.1236 0.1236 0.9923 1.396 1.3154)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9933 -0.1158 0.1158 0.9933 1.4912 1.3047)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">g</text>
+<text transform="matrix(0.9945 -0.105 0.105 0.9945 1.7104 1.2798)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">o</text>
+<text transform="matrix(0.9954 -0.0962 0.0962 0.9954 1.9258 1.2578)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">t</text>
+<text transform="matrix(0.9959 -0.0903 0.0903 0.9959 2.0693 1.2432)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9965 -0.0836 0.0836 0.9965 2.1646 1.2334)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">s</text>
+<text transform="matrix(0.9973 -0.074 0.074 0.9973 2.3354 1.2197)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">o</text>
+<text transform="matrix(0.9982 -0.0601 0.0601 0.9982 2.5557 1.2031)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">m</text>
+<text transform="matrix(0.9989 -0.0466 0.0466 0.9989 2.894 1.1826)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.9992 -0.039 0.039 0.9992 3.1021 1.1743)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9995 -0.033 0.033 0.9995 3.1982 1.1694)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">t</text>
+<text transform="matrix(0.9996 -0.0271 0.0271 0.9996 3.3413 1.165)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">i</text>
+<text transform="matrix(0.9998 -0.0191 0.0191 0.9998 3.437 1.1611)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">p</text>
+<text transform="matrix(1 -0.0091 0.0091 1 3.6636 1.1572)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">s</text>
+<text transform="matrix(1 -0.0025 0.0025 1 3.8975 1.2183)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(1 0.0035 -0.0035 1 3.9326 1.1553)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">t</text>
+<text transform="matrix(0.9999 0.0125 -0.0125 0.9999 4.0742 1.1562)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">o</text>
+<text transform="matrix(0.9998 0.0203 -0.0203 0.9998 4.293 1.1592)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9996 0.0276 -0.0276 0.9996 4.3887 1.1611)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">k</text>
+<text transform="matrix(0.9993 0.0377 -0.0377 0.9993 4.5879 1.1665)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.9988 0.0481 -0.0481 0.9988 4.7959 1.1748)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.9983 0.0589 -0.0589 0.9983 5.0039 1.1846)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">p</text>
+<text transform="matrix(0.9978 0.0668 -0.0668 0.9978 5.2305 1.1978)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.9973 0.0741 -0.0741 0.9973 5.3252 1.2041)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">y</text>
+<text transform="matrix(0.9965 0.0841 -0.0841 0.9965 5.5156 1.2188)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">o</text>
+<text transform="matrix(0.9955 0.0949 -0.0949 0.9955 5.7373 1.2373)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">u</text>
+<text transform="matrix(0.9947 0.1027 -0.1027 0.9947 5.9541 1.2583)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282"> </text>
+<text transform="matrix(0.994 0.1098 -0.1098 0.994 6.0488 1.2681)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">c</text>
+<text transform="matrix(0.9928 0.1199 -0.1199 0.9928 6.2422 1.2891)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">u</text>
+<text transform="matrix(0.9917 0.1286 -0.1286 0.9917 6.46 1.3159)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">r</text>
+<text transform="matrix(0.9908 0.1353 -0.1353 0.9908 6.5957 1.333)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">r</text>
+<text transform="matrix(0.9896 0.1437 -0.1437 0.9896 6.7295 1.3506)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">e</text>
+<text transform="matrix(0.9881 0.154 -0.154 0.9881 6.9355 1.3818)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">n</text>
+<text transform="matrix(0.9867 0.1627 -0.1627 0.9867 7.1514 1.4141)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">t</text>
+<text transform="matrix(0.9857 0.1685 -0.1685 0.9857 7.291 1.4385)" fill="#67A4D9" font-family="'Montserrat-Regular'" font-size="0.3282">.</text>
+</svg>

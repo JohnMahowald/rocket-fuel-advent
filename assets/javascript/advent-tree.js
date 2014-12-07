@@ -1,6 +1,6 @@
 (function() {
 	
-	if (typeof Advent === "undefined") {
+	if (typeof window.Advent === "undefined") {
 		window.Advent = {}		
 	}
 	
@@ -8,10 +8,23 @@
 	
 	// Common DOM Elements
 	Advent.$currentTip = $(".current-tip")
-	Advent.$mainTree = $("#main-tree")	
+	Advent.$mainTree = $("#main-tree")
 	
-	// Initializes the parallax
-	$.stellar();
+	// Initialize parallax
+	$.stellar({ responsive: true });
+	
+	// Create Date Cards
+	Advent.dateCards = []
+	
+	$('.day').each( function (idx, el) {
+		Advent.dateCards.push( new Advent.DateCard({
+			$el: $(el)
+		}));
+	})
+	
+	Advent.dateCards.forEach ( function (card) {
+		card.setActiveCard();
+	})
 	
 	// Arches the text "December" in the tree	
 	$('.december').arctext({ radius: 32	});
@@ -24,8 +37,8 @@
 			.find(".present")
 			.hide()
 			.addClass("active")
-			.fadeIn(400, function() {	
-				$(e.currentTarget).find(".past").removeClass("active")				
+			.fadeIn(300, function() {	
+				$(e.currentTarget).find(".past").removeClass("active")
 				$(e.currentTarget).find(".future").removeClass("active")
 		})
 	};
@@ -33,15 +46,40 @@
 	Advent.hideFlag = function (e) {
 		e.preventDefault
 		
-		e.preventDefault
 		$(e.currentTarget)
 			.find(".past")
-			.hide()
 			.addClass("active")
-			.fadeOut(400, function() {	
-				$(e.currentTarget).find(".present").removeClass("active")
-		})
+		$(e.currentTarget)
+			.find(".present")
+			.removeClass("active")
 	};
+	
+	Advent.maybeRenderFlag = function (e) {
+		e.preventDefault
+		
+		if (Advent.getDateCard(e).active) {
+			Advent.renderFlag(e)
+			return true
+		} else {
+			return false
+		}
+	}
+	
+	Advent.maybeHideFlag = function (e) {
+		e.preventDefault
+		
+		if (Advent.getDateCard(e).active) {
+			Advent.hideFlag(e)
+			return true;
+		} else {
+			return false
+		}
+	}
+	
+	Advent.getDateCard = function (e) {
+		var day = $(e.currentTarget).data().day;
+		return Advent.dateCards[parseInt(day) - 1];
+	}
 	
 	Advent.setCurrentTipOpacity = function (e) {	
 		var tipTop = Advent.$currentTip.offset().top;
@@ -56,11 +94,7 @@
 	}
 	
 	// Event Listeners
-	$('.day').hover( Advent.renderFlag, Advent.hideFlag)
+	$('.day').hover( Advent.maybeRenderFlag, Advent.maybeHideFlag)
 	$(window).scroll( Advent.setCurrentTipOpacity )
 	$(window).scroll( Advent.setSidebarMenu )
-	
-	// To be Removed
-	console.log("Design by: Iron Creative")
-	console.log("Built by: John Mahowald (www.johnmahowald.com)")
 })();

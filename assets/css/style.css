@@ -79,7 +79,7 @@ body {
 
 .main-banner>h1 {
 	font-family: "Montserrat-Bold", Arial, sans-serif;	
-	margin-top: 55px;
+	margin-top: 63px;
 	font-size: 1.5em;
 }
 
@@ -95,7 +95,7 @@ body {
 	width: 300px;
 	height: 80px;
 	margin: 0 auto;
-	margin-top: -80px;
+	margin-top: -70px;
 }
 
 .sub-banner>h3 {
@@ -137,87 +137,239 @@ body {
 #main-tree {
 	position: relative;
 	margin: 0 auto;
-	margin-top: 290px;
+	margin-top: 315px;
 	background: url(../images/main-tree.svg) no-repeat center;
-	background-size: contain;
-	height: 1800px;
-	width: 870px;
+	background-size: cover;
+	height: 1700px;
+	width: 806px;
 }
 
 .day {
-	height: 90px;
-	width: 90px;
-	border-radius: 50px;
-	opacity: .9;	
-	transition: width .4s, background-color .1s;
-}
-
-.day.past {
-	background-color: #E2F4FD;
-	border: 10px solid #AEE1F7;
-	height: 71px;
-	width: 71px;
-	opacity: .6;	
-}
-
-.day:hover {
-	position: relative;
-	background-color: #F5C64A;
-	width: 300px;
-	background-image: none;
-	border: 8px solid #F5C64A;
-	height: 76px;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-	opacity: 1;
-}
-
-.day>.title {
-	width: 170px;
-	padding: 10px 0;
-	margin-left: 100px;
-	color: white;
-}
-
-.day>.sub-header {
-	width: 170px;
-	margin-left: 100px;
-}
-
-.day>a {
 	position: absolute;
-	transform: rotate(90deg);
-	font-size: .9em;
-	text-decoration: none;
-	right: -30px;
-	top: 26px;
-	text-align: center;
-	color: white;
-	border-bottom: 1px solid white;
-	padding-bottom: 10px;
+	height: 88px;
+	width: 88px;
+	border-radius: 50px;
 }
+
+.day-tile {
+	display: none;
+}
+
+.day-tile.active {
+	display: block;
+}
+
+.day>.past {
+	border: 8px solid #AEE1F7;
+	height: 72px;
+	width: 72px;	
+	border-radius: 50px;
+	opacity: .6;
+}
+
+.present {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 8px solid #F5C64A;
+	background-color: #F5C64A;
+	height: 72px;
+	width: 300px;
+	border-top-left-radius: 50px;	
+	border-bottom-left-radius: 50px;
+	font-family: "Montserrat", Arial, sans-serif;
+	opacity: 1;
+	z-index: 2;
+}
+
+.present>.headshot {
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	border: 8px solid #F5C64A;
+	height: 72px;
+	width: 72px;	
+	border-radius: 50px;
+}
+
+.present>.title {
+	width: 170px;
+	margin-left: 90px;
+	padding: 7px 0;
+	color: #fff;
+	font-size: 1.1em;
+}
+
+.present>.sub-header {
+	width: 170px;
+	margin-left: 90px;
+	margin-top: 4px;
+}
+
+.present>span {
+	transform: rotate(90deg);
+	border-bottom: 1px solid #fff;
+	width: 70px;
+	display: block;
+	position: absolute;
+	top: 35px;
+	right: 0;
+}
+
+.present>a {
+	position: absolute;
+	right: -20px;
+	top: 20px;
+	display: block;
+	text-decoration: none;
+	width: 80px;
+	font-size: 10pt;
+	padding-bottom: 20px;
+	color: #fff;
+	transform: rotate(90deg);	
+}
+
+.december {
+	display: block;
+	color: #66A4D9;
+	letter-spacing: -2px;
+	text-align: center;
+	margin-top: 7px;
+	font-size: 10pt;
+}
+
+.date {
+	display: block;
+	font-family: "Montserrat-Bold", Arial, sans-serif;
+	font-size: 32pt;
+	text-align: center;
+	margin-top: 7px;
+	color: #66A4D9;
+}
+
+/* Day Cards */
 
 #day-1 {
-	position: absolute;
-	top: 220px;
-	left: 388px;
+	top: 208px;
+	left: 358px;
 }
 
-#day-1.past {
+#day-1 .headshot {
 	background: url(../images/headshots/day-1.jpg) no-repeat center center;
 	background-size: 80px 73px;
 }
 
 #day-2 {
-	position: absolute;
-	top: 392px;
-	left: 388px;
+	top: 372px;
+	left: 358px;
 }
 
-#day-2.past {
-	background: url(../images/headshots/day2.jpg) no-repeat center center;
+#day-2 .headshot {
+	background: url(../images/headshots/day-2.jpg) no-repeat center center;
 	background-size: 80px 73px;
 }
+
+#day-3 {
+	top: 654px;
+	left: 423px;
+}
+
+#day-3 .headshot {
+	background: url(../images/headshots/day-1.jpg) no-repeat center center;
+	background-size: 80px 73px;
+}
+
+#day-4 {
+	top: 715px;
+	left: 295px;
+}
+
+#day-4 .headshot {
+	background: url(../images/headshots/day-2.jpg) no-repeat center center;
+	background-size: 80px 73px;
+}
+
+#day-5 {
+	top: 774px;
+	left: 411px;
+}
+
+#day-5 .headshot {
+	background: url(../images/headshots/day-1.jpg) no-repeat center center;
+	background-size: 80px 73px;
+}
+
+#day-6 {
+	top: 901px;
+	left: 358px;
+}
+
+#day-6 .headshot {
+	background: url(../images/headshots/day-1.jpg) no-repeat center center;
+	background-size: 80px 73px;
+}
+
+#day-7 {
+	top: 1015px;
+	left: 423px;
+}
+
+#day-7 .headshot {
+	background: url(../images/headshots/day-2.jpg) no-repeat center center;
+	background-size: 80px 73px;
+}
+
+#day-8 {
+	top: 1123px;
+	left: 298px;
+}
+
+#day-8 .headshot {
+	background: url(../images/headshots/day-1.jpg) no-repeat center center;
+	background-size: 80px 73px;
+}
+
+#day-9 {
+	top: 1188px;
+	left: 424px;
+}
+
+#day-9 .headshot {
+	background: url(../images/headshots/day-2.jpg) no-repeat center center;
+	background-size: 80px 73px;
+}
+
+#day-10 {
+	top: 1303px;
+	left: 358px;
+}
+
+#day-10 .headshot {
+	background: url(../images/headshots/day-1.jpg) no-repeat center center;
+	background-size: 80px 73px;
+}
+
+#day-11 {
+	top: 774px;
+	left: 411px;
+}
+
+#day-11 .headshot {
+	background: url(../images/headshots/day-2.jpg) no-repeat center center;
+	background-size: 80px 73px;
+}
+
+#day-12 {
+	top: 774px;
+	left: 411px;
+}
+
+#day-12 .headshot {
+	background: url(../images/headshots/day-1.jpg) no-repeat center center;
+	background-size: 80px 73px;
+}
+
+
 
 /* Sidebar */
 
@@ -254,7 +406,7 @@ body {
 	z-index: -1;
 	position: fixed;
 	background: url(../images/background-tree.svg) no-repeat center;
-	background-size: contain;
+	background-size: cover;
 }
 
 .background-tree.tall {
@@ -305,10 +457,11 @@ body {
 	width: 100%;
 	background-color: #E2F4FD;
 	box-shadow: 0 0 7px 5px #999999;
+	z-index: 10;
 }
 
 .fixed-footer.pattern-solid {
-	z-index: 1;
+	z-index: 11;
 	background-position: center;
 }
 

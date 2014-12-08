@@ -4,11 +4,6 @@ Tree: #66A4D9
 Soft-Blue: #AEE1F7
 Gold: #F5C64A
 
-/* Tree Ratio
-heigth: 500, width: 235
-
-*/
-
 /* Fonts */
 @font-face {
 	font-family: "Montserrat-Bold";
@@ -60,7 +55,6 @@ body {
 .banners {
 	position: fixed;
 	top: 0;
-	margin-top: 70px;
 	font-family: "Montserrat", Arial, sans-serif;	
 	text-align: center;
 	color: #66A4D9;	
@@ -71,39 +65,31 @@ body {
 .main-banner {
 	background: url(../images/main-banner.svg) no-repeat center;
 	background-size: cover;
-	width: 380px;
-	height: 200px;
+	width: 550px;
+	height: 290px;
 	overflow: auto;
 	margin: 0 auto;
 }
 
 .main-banner>h1 {
 	font-family: "Montserrat-Bold", Arial, sans-serif;	
-	margin-top: 63px;
-	font-size: 1.5em;
+	margin-top: 90px;
+	font-size: 2.1em;
 }
 
 .main-banner>h2 {
 	margin-top: 5px;
-	font-size: 1.4em;
+	font-size: 2.0em;
 }
 
 .sub-banner {
 	overflow: auto;
 	background: url(../images/sub-banner.svg) no-repeat center;
 	background-size: cover;
-	width: 300px;
-	height: 80px;
+	width: 400px;
+	height: 120px;
 	margin: 0 auto;
-	margin-top: -70px;
-}
-
-.sub-banner>h3 {
-	font-size: .8em;
-}
-
-.sub-banner>h3:first-of-type {
-	margin-top: 10px;
+	margin-top: -110px;
 }
 
 /* Current Link Tip */
@@ -112,7 +98,7 @@ body {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	margin-top: 270px;
+	margin-top: 283px;
 }
 
 .current-tip>a {
@@ -137,7 +123,7 @@ body {
 #main-tree {
 	position: relative;
 	margin: 0 auto;
-	margin-top: 315px;
+	margin-top: 330px;
 	background: url(../images/main-tree.svg) no-repeat center;
 	background-size: cover;
 	height: 1700px;
@@ -182,6 +168,15 @@ body {
 	z-index: 2;
 }
 
+.day .present.active {
+	opacity: 0;
+	transition: all .3s;
+}
+
+.day:hover .present.active {
+	opacity: 1;
+}
+
 .present>.headshot {
 	position: absolute;
 	top: -8px;
@@ -207,13 +202,15 @@ body {
 }
 
 .present>span {
-	transform: rotate(90deg);
 	border-bottom: 1px solid #fff;
 	width: 70px;
 	display: block;
 	position: absolute;
 	top: 35px;
 	right: 0;
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);	
+	transform: rotate(90deg);	
 }
 
 .present>a {
@@ -226,6 +223,8 @@ body {
 	font-size: 10pt;
 	padding-bottom: 20px;
 	color: #fff;
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);	
 }
 
@@ -241,10 +240,38 @@ body {
 .date {
 	display: block;
 	font-family: "Montserrat-Bold", Arial, sans-serif;
-	font-size: 32pt;
+	font-size: 26pt;
 	text-align: center;
-	margin-top: 7px;
+	margin-top: 8px;
 	color: #66A4D9;
+}
+
+.tab-shadow {
+	position: absolute;
+	background: url(../images/tab-shadow.svg) no-repeat center center;
+	background-size: cover;
+	height: 115px;
+	width: 260px;
+	top: 0;
+	left: 70px;
+}
+
+.day>.tab-shadow {
+	display: none;
+}
+
+.day.active>.tab-shadow {
+	display: block;
+}
+
+.day.active>.tab-shadow {
+	transition: all .2s;
+	opacity: 0;
+}
+
+.day.active:hover>.tab-shadow {
+	transition: all .6s;
+	opacity: 1;
 }
 
 /* Day Cards */
@@ -349,52 +376,35 @@ body {
 	background-size: 80px 73px;
 }
 
-#day-11 {
-	top: 774px;
-	left: 411px;
-}
-
-#day-11 .headshot {
-	background: url(../images/headshots/day-2.jpg) no-repeat center center;
-	background-size: 80px 73px;
-}
-
-#day-12 {
-	top: 774px;
-	left: 411px;
-}
-
-#day-12 .headshot {
-	background: url(../images/headshots/day-1.jpg) no-repeat center center;
-	background-size: 80px 73px;
-}
-
-
-
 /* Sidebar */
 
-.sidebar>ul {
-	position: fixed;
+.sidebar {
+	position: absolute;
 	right: 10%;
-	top: 30%;
+	top: 320px;
 }
 
-.sidebar>ul>li {
+.sidebar.fixed {
+	position: fixed;
+}
+
+.sidebar>li {
 	margin: 0 auto;
-	margin-top: 10px;	
+	margin-top: 14px;	
 	height: 20px;
 	width: 20px;
 	background-color: #fff;
 	border-radius: 20px;
+	vertical-align: middle;
 }
 
-.sidebar>ul>li.active {
+.sidebar>li.active {
+	border: 4px solid #66A4D9;
 	height: 13px;
 	width: 13px;
-	border: 4px solid #66A4D9;
 }
 
-.sidebar>ul>li.today {
+.sidebar>li.today {
 	background-color: #F5C64A;
 	height: 22px;
 	width: 22px;

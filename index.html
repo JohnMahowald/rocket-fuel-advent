@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>The Future of Marketing</title>
     <link rel='icon' type='image/png' href='favicon.ico'>
-    <link rel='stylesheet' type='text/css' href='assets/css/reset.css'>    
+    <link rel='stylesheet' type='text/css' href='assets/css/reset.css'>
     <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
   </head>
   <body>
@@ -41,7 +41,6 @@
     <!-- Main Tree -->
     
     <div id='main-tree'>
-      
       <!-- Day 1 -->
       <div class='day' 
          id='day-1' 
@@ -56,6 +55,7 @@
           <span></span>
           <a href='#'>Learn More</a>
         </div>
+        <div class='tab-shadow'></div>
     
         <div class='day-tile future'>
           <span class='december'>DECEMBER</span>
@@ -77,6 +77,7 @@
           <span></span>
           <a href='#'>Learn More</a>
         </div>
+        <div class='tab-shadow'></div>        
         
         <div class='day-tile future'>
           <span class='december'>DECEMBER</span>
@@ -98,6 +99,7 @@
           <span></span>
           <a href='#'>Learn More</a>
         </div>
+        <div class='tab-shadow'></div>        
         
         <div class='day-tile future'>
           <span class='december'>DECEMBER</span>
@@ -119,7 +121,8 @@
           <span></span>
           <a href='#'>Learn More</a>
         </div>
-        
+        <div class='tab-shadow'></div>
+                
         <div class='day-tile future'>
           <span class='december'>DECEMBER</span>
           <span class='date'>17</span>
@@ -139,6 +142,7 @@
           <span></span>
           <a href='#'>Learn More</a>
         </div>
+        <div class='tab-shadow'></div>        
         
         <div class='day-tile future'>
           <span class='december'>DECEMBER</span>
@@ -147,7 +151,7 @@
       </div>
       
       <!-- Day 6 -->
-      <div class='day' 
+      <div class='day'
            id='day-6' 
            data-day='6' 
            data-utc-active='1418180400000'>
@@ -160,6 +164,7 @@
           <span></span>
           <a href='#'>Learn More</a>
         </div>
+        <div class='tab-shadow'></div>
         
         <div class='day-tile future'>
           <span class='december'>DECEMBER</span>
@@ -181,6 +186,7 @@
           <span></span>
           <a href='#'>Learn More</a>
         </div>
+        <div class='tab-shadow'></div>        
         
         <div class='day-tile future'>
           <span class='december'>DECEMBER</span>
@@ -202,6 +208,7 @@
           <span></span>
           <a href='#'>Learn More</a>
         </div>
+        <div class='tab-shadow'></div>        
         
         <div class='day-tile future'>
           <span class='december'>DECEMBER</span>
@@ -223,6 +230,7 @@
           <span></span>
           <a href='#'>Learn More</a>
         </div>
+        <div class='tab-shadow'></div>        
         
         <div class='day-tile future'>
           <span class='december'>DECEMBER</span>
@@ -244,6 +252,7 @@
           <span></span>
           <a href='#'>Learn More</a>
         </div>
+        <div class='tab-shadow'></div>        
         
         <div class='day-tile future'>
           <span class='december'>DECEMBER</span>
@@ -280,34 +289,28 @@
       data-stellar-ratio="0.15"></div>
     
     <!--- Sidebar -->
-    <div class='sidebar'>
-      <ul>
-        <li data-link="day-1" class='active'></li>
-        <li class='active'></li>
-        <li class='active'></li>
-        <li class='today'></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
+    <ul class='sidebar'>
+      <li data-target="#day-1"></li>
+      <li data-target="#day-2"></li>
+      <li data-target="#day-3"></li>
+      <li data-target="#day-4"></li>
+      <li data-target="#day-5"></li>
+      <li data-target="#day-6"></li>
+      <li data-target="#day-7"></li>
+      <li data-target="#day-8"></li>
+      <li data-target="#day-9"></li>
+      <li data-target="#day-10"></li>
+    </ul>
     <footer class='fixed-footer pattern-solid'>
       <div class='pattern-outline'>
         <a href="http://www.rocketfuel.com" target='_blank'></a>
       </div>
     </footer>
+    
     <!-- Scripts -->
     <script 
       src='assets/javascript/jquery-1.11.1.min.js'
       type='text/javascript'></script>
-    <script 
-      src='assets/javascript/jquery-ui.min.js'
-      type='text/javascript'></script>    
     <script 
       src='assets/javascript/jquery.stellar.min.js'
       type='text/javascript'></script>
@@ -318,10 +321,16 @@
       src='assets/javascript/jquery.arctext.js'
       type='text/javascript'></script>
     <script 
-      src='assets/javascript/date-objects.js' 
-      type='text/javascript'></script>
+      src='assets/javascript/advent-date-cards.js' 
+      type='text/javascript'></script> 
     <script 
-      src='assets/javascript/advent-tree.js' 
+      src='assets/javascript/advent-event-listeners.js' 
+      type='text/javascript'></script>
+    <script
+      src='assets/javascript/advent-scroll.js'
+      type='text/javascript'></script>    
+    <script 
+      src='assets/javascript/advent-initialize.js' 
       type='text/javascript'></script>
   </body>
 </html>

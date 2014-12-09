@@ -199,9 +199,17 @@ body {
 	background-color: #66A4D9;
 	z-index: 2;
 	opacity: .4;
-	height: 87px;
-	width: 87px;
+	height: 90px;
+	width: 90px;
 	border-radius: 50px;
+}
+
+.day>.filter-overlay {
+	display: none;
+}
+
+.day.active>.filter-overlay {
+	display: block;
 }
 
 .present>.title {

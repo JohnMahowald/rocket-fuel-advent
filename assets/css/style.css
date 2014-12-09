@@ -1,11 +1,11 @@
 /* Colors
 Background: #E2F4FD
-Tree: #66A4D9
+Tree-Blue: #66A4D9
 Soft-Blue: #AEE1F7
 Gold: #F5C64A
 
 /* Fonts */
-@font-face {
+/*@font-face {
 	font-family: "Montserrat-Bold";
 	src: url('../fonts/Montserrat-Bold.ttf');
 }
@@ -13,7 +13,7 @@ Gold: #F5C64A
 @font-face {
 	font-family: "Montserrat";
 	src: url('../fonts/Montserrat-Regular.ttf');
-}
+}*/
 
 /* Main Styling */
 
@@ -119,15 +119,15 @@ body {
 }
 
 /* Main Tree */
-
 #main-tree {
-	position: relative;
-	margin: 0 auto;
-	margin-top: 330px;
+	position: absolute;
 	background: url(../images/main-tree.svg) no-repeat center;
 	background-size: cover;
+	top: 330px;
 	height: 1700px;
 	width: 806px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .day {
@@ -184,6 +184,23 @@ body {
 	border: 8px solid #F5C64A;
 	height: 72px;
 	width: 72px;	
+	border-radius: 50px;
+}
+
+.day-tile.past.headshot {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.filter-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #66A4D9;
+	z-index: 2;
+	opacity: .4;
+	height: 87px;
+	width: 87px;
 	border-radius: 50px;
 }
 
@@ -275,6 +292,7 @@ body {
 }
 
 /* Day Cards */
+
 
 #day-1 {
 	top: 208px;
@@ -414,48 +432,47 @@ body {
 
 .background-tree {
 	z-index: -1;
-	position: fixed;
-	background: url(../images/background-tree.svg) no-repeat center;
+	height: 1000px;
+	width: 500px;
+	bottom: 0;
+	position: absolute;
+}
+
+.background-tree.dark {
+	background: url(../images/background-tree-dark.svg) no-repeat center top;
 	background-size: cover;
+	bottom: -1080px;
 }
 
-.background-tree.tall {
-	height: 800px;
-	width: 375px;
-	bottom: -300px;
+.background-tree.light {
+	background: url(../images/background-tree-light.svg) no-repeat center top;
+	background-size: cover;
+	z-index: -2;
+	bottom: -1150px;
 }
 
-.background-tree.short {
-	height: 600px;
-	width: 280px;
-	bottom: -200px;	
-}
-
-.background-tree.tiny {
-	height: 1500px;
-	width: 650px;
-	bottom: -1500px;
+#tree-1 {
+	left: 0;
+	background-position: right top;
+	width: 400px;
 }
 
 #tree-2 {
-	left: 13%;
-}
-
-#tree-6 {
-	left: 3%;
+	left: 5%;
 }
 
 #tree-3 {
-	left: 27%;
-	bottom: -150px;
+	left: 13%;
 }
 
 #tree-4 {
-	right: 20%;
+	right: 10%;
 }
 
 #tree-5 {
-	right: 8%;	
+	right: 0;
+	background-position: left top;
+	width: 400px;
 }
 
 /* Footer */
@@ -466,7 +483,7 @@ body {
 	height: 70px;
 	width: 100%;
 	background-color: #E2F4FD;
-	box-shadow: 0 0 7px 5px #999999;
+	box-shadow: 0 0 6px 8px rgba(0, 0, 0, .4);
 	z-index: 10;
 }
 

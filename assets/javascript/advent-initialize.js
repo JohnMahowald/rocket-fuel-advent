@@ -9,7 +9,7 @@
 	var Advent = window.Advent;
 	
 	// Variables
-	Advent.$currentTip = $(".current-tip");
+	Advent.$currentTip = $(".current-tip>a");
 	Advent.$window = $(window)
 	Advent.$mainTree = $("#main-tree");
 	Advent.$sidebar = $('.sidebar');
@@ -41,10 +41,11 @@
 	})
 	
 	// Sets the menu based on past, present, or future
-	Advent.setMenu()
+	Advent.setMenu();
+	
+	// Set Today's Tip
+	Advent.setTodaysTip();
 	
 	// Register Event Listeners
-	Advent.$window.scroll( Advent.setCurrentTipOpacity )
-	Advent.$window.scroll( Advent.setSidebarMenu )
-	Advent.$window.scroll( Advent.maybeFixSidebar )
+	Advent.assignEventListeners();
 })();

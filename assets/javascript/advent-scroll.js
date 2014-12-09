@@ -7,6 +7,15 @@
 	
 	var Advent = window.Advent;
 	
+	Advent.setTodaysTip = function () {
+		Advent.$currentTip.data("target", "#day-1")
+	}
+	
+	Advent.scrollOnClick = function (e) {
+		e.preventDefault
+		$.scrollTo($(e.currentTarget).data().target, 400)
+	}
+	
 	Advent.setMenu = function () {
 		Advent.dateCards.forEach( function (card, idx) {			
 			if (card.today) {

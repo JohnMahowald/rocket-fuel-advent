@@ -48,4 +48,5 @@
 	
 	// Register Event Listeners
 	Advent.assignEventListeners();
+	
 })();

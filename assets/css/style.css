@@ -131,126 +131,122 @@ body {
 }
 
 .day {
-	position: absolute;
+	position: relative;
 	height: 88px;
 	width: 88px;
 	border-radius: 50px;
 }
 
-.day-tile {
-	display: none;
-}
-
-.day-tile.active {
-	display: block;
-}
-
-.day>.past {
-	border: 8px solid #AEE1F7;
-	height: 72px;
-	width: 72px;	
-	border-radius: 50px;
-	opacity: .6;
-}
-
-.present {
-	position: absolute;
-	top: 0;
-	left: 0;
-	border: 8px solid #F5C64A;
-	background-color: #F5C64A;
-	height: 72px;
-	width: 300px;
-	border-top-left-radius: 50px;	
-	border-bottom-left-radius: 50px;
-	font-family: "Montserrat", Arial, sans-serif;
-	opacity: 1;
-	z-index: 2;
-}
-
-.day .present.active {
-	opacity: 0;
-	transition: all .3s;
-}
-
-.day:hover .present.active {
-	opacity: 1;
-}
-
-.present>.headshot {
-	position: absolute;
-	top: -8px;
-	left: -8px;
-	border: 8px solid #F5C64A;
-	height: 72px;
-	width: 72px;	
-	border-radius: 50px;
-}
-
-.day-tile.past.headshot {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-}
-
-.filter-overlay {
+.filter {
 	position: absolute;
 	top: 0;
 	left: 0;
 	background-color: #66A4D9;
 	z-index: 2;
 	opacity: .4;
-	height: 90px;
-	width: 90px;
+	height: 88px;
+	width: 88px;
 	border-radius: 50px;
 }
 
-.day>.filter-overlay {
+.headshot {
+	border: 8px solid #AEE1F7;
+	height: 88px;
+	width: 88px;
+	border-radius: 50px;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);	
+}
+
+.flag {
+	position: relative;
+	display: block;
+	width: 380px;
+	padding: 10px;
+	background-color: #F5C64A;
+	left: 45px;
+	top: 45px;
+	transform: translateY(-50%);
+	padding: 20px;
+	padding-left: 60px;
+	visibility: hidden;
+	z-index: -1;	
+	opacity: 0;	
+	transition: opacity .5s;
+}
+
+.flag>a.learn-more {
+	position: absolute;
+	top: 0;	
+	right: 0;
+	display: block;
+	width: 75px;
+	height: 100%;
+	background: url(../images/learn-more.svg) no-repeat center center;
+	background-size: 20px 100px;
+}
+
+/*.flag>.learn-more {
+	display: block;
+	position: absolute;
+	right: -40px;
+	padding: 20px;
+	border: 1px solid green;
+	text-align: center;
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}*/
+
+.content-wrapper {
+	border-right: 1px solid #fff;
+	width: 240px;
+	padding-right: 20px;
+}
+
+.content-wrapper>.name {
+	font-family: "Montserrat-Bold", Arial, sans-serif;
+	font-size: 1.2em;
+	color: #fff;
+}
+
+.content-wrapper>.role {
+	margin-top: 5px;
+	font-size: 1.1em;
+	color: #fff;
+}
+
+.content-wrapper>.description {
+	margin-top: 5px;
+	font-size: 1em;
+}
+
+.day>.filter-overlay, .day>.headshot {
 	display: none;
 }
 
-.day.active>.filter-overlay {
-	display: block;
+.day.active>.future-content {
+	display: none;
 }
 
-.present>.title {
-	width: 170px;
-	margin-left: 90px;
-	padding: 7px 0;
-	color: #fff;
-	font-size: 1.1em;
-}
-
-.present>.sub-header {
-	width: 170px;
-	margin-left: 90px;
-	margin-top: 4px;
-}
-
-.present>span {
-	border-bottom: 1px solid #fff;
-	width: 70px;
-	display: block;
+.day.active>.headshot {
 	position: absolute;
-	top: 35px;
-	right: 0;
-	-ms-transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);	
-	transform: rotate(90deg);	
+	display: block;
 }
 
-.present>a {
-	position: absolute;
-	right: -20px;
-	top: 20px;
-	display: block;
-	text-decoration: none;
-	width: 80px;
-	font-size: 10pt;
-	padding-bottom: 20px;
-	color: #fff;
-	-ms-transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);
-	transform: rotate(90deg);	
+.day.active:hover>.filter {
+	display: none;
+}
+
+.day.active:hover>.headshot {
+	border-color: #F5C64A;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+.day.active:hover>.flag {
+	visibility: visible;
+	opacity: 1;
 }
 
 .december {
@@ -271,39 +267,11 @@ body {
 	color: #66A4D9;
 }
 
-.tab-shadow {
-	position: absolute;
-	background: url(../images/tab-shadow.svg) no-repeat center center;
-	background-size: cover;
-	height: 115px;
-	width: 260px;
-	top: 0;
-	left: 70px;
-}
-
-.day>.tab-shadow {
-	display: none;
-}
-
-.day.active>.tab-shadow {
-	display: block;
-}
-
-.day.active>.tab-shadow {
-	transition: all .2s;
-	opacity: 0;
-}
-
-.day.active:hover>.tab-shadow {
-	transition: all .6s;
-	opacity: 1;
-}
-
 /* Day Cards */
 
 
 #day-1 {
-	top: 208px;
+	top: 207px;
 	left: 358px;
 }
 
@@ -313,8 +281,8 @@ body {
 }
 
 #day-2 {
-	top: 371px;
-	left: 358px;
+	top: 370px;
+	left: 357px;
 }
 
 #day-2 .headshot {
@@ -323,7 +291,7 @@ body {
 }
 
 #day-3 {
-	top: 654px;
+	top: 653px;
 	left: 423px;
 }
 
@@ -333,7 +301,7 @@ body {
 }
 
 #day-4 {
-	top: 715px;
+	top: 714px;
 	left: 295px;
 }
 

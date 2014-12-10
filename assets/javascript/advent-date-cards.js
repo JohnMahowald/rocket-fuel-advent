@@ -10,7 +10,7 @@
 	
 	Advent.setActiveDateCards = function () {
 		Advent.dateCards.forEach( function (card) {
-			if (card.active) { 
+			if (card.active) {
 				card.$el.addClass("active")
 				card.$el.find(".present").addClass("active")
 			}
@@ -25,11 +25,6 @@
 		return Advent.activeDate(utcTime) < Advent.today.getTime();
 	}
 	
-	Advent.isToday = function (utcTime) {
-		var testDate = new Date(Advent.activeDate(utcTime));
-		return Advent.today.getDate() === testDate.getDate();
-	}
-	
 	Advent.getDateCard = function (e) {
 		var day = $(e.currentTarget).data().day;
 		return Advent.dateCards[parseInt(day) - 1];
@@ -42,16 +37,14 @@
 		return new Advent.DateCard({
 			$el: $el,
 			$sidebarLink: $("li[data-target=#day-" + $el.data().day + "]"),
-			active: Advent.dateIsActive(utcTime),
-			today: Advent.isToday(utcTime)
+			active: Advent.dateIsActive(utcTime)
 		});
 	}
 	
 	Advent.DateCard = function (options) {
 		this.$el = options.$el,
 		this.active = options.active,
-		this.$sidebarLink = options.$sidebarLink,
-		this.today = options.today
+		this.$sidebarLink = options.$sidebarLink
 	}
 	
 	Advent.DateCard.prototype.setActiveCard = function () {

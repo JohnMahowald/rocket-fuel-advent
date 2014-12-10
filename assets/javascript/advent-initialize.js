@@ -13,11 +13,12 @@
 	Advent.$window = $(window)
 	Advent.$mainTree = $("#main-tree");
 	Advent.$sidebar = $('.sidebar');
-	Advent.$sidebarTop = (Advent.$window.height() - Advent.$sidebar.height()) / 2;
 	Advent.$days = $('.day');
 	Advent.$december = $('.december');
 	Advent.today = new Date();
-	Advent.dateCards = []
+	Advent.dateCards = [];
+	Advent.finalDay = 23;
+	Advent.dissableScroll = false;
 	
 	// Initialize parallax
 	$.stellar();
@@ -36,9 +37,7 @@
 	Advent.setActiveDateCards()
 	
 	// Changes card view based on date
-	Advent.dateCards.forEach ( function (card) {
-		card.setActiveCard();
-	})
+	Advent.dateCards.forEach ( function (card) { card.setActiveCard()	});
 	
 	// Sets the menu based on past, present, or future
 	Advent.setMenu();
@@ -46,7 +45,15 @@
 	// Set Today's Tip
 	Advent.setTodaysTip();
 	
-	// Register Event Listeners
-	Advent.assignEventListeners();
+	// Hide Today's tip on last day
+	Advent.maybeHideTodaysTip();
 	
+	// Register Event Listeners
+	Advent.$window.scroll( Advent.maybeScroll );
+	Advent.$currentTip.click( Advent.scrollToElement );
+	Advent.$sidebar.find("li").click( Advent.scrollToElement )
+	Advent.$window.scroll( Advent.maybeFixSidebar );
+	Advent.$window.scroll( Advent.setCurrentTipOpacity )
+	Advent.$window.scroll( Advent.setActiveSidebarItem )
+  $(window).resize( function() { location.reload() })	
 })();

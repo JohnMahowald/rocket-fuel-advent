@@ -7,13 +7,11 @@
 	
 	var Advent = window.Advent;
 	
-	Advent.setTodaysTip = function () {
-		Advent.$currentTip.data("target", "#day-1")
-	}
-	
-	Advent.scrollOnClick = function (e) {
+	Advent.scrollToElement = function (e) {
 		e.preventDefault
-		$.scrollTo($(e.currentTarget).data().target, 400)
+		var target = $(e.currentTarget).data().target;
+		var targetHeight = $(target).offset().top - ($(window).height() / 3);
+		$.scrollTo(targetHeight, 400)
 	}
 	
 	Advent.setMenu = function () {
@@ -40,16 +38,34 @@
 			Advent.$currentTip.css("opacity", 0)
 		)
 	}
-
+	
 	Advent.maybeFixSidebar = function () {
-		var topSpan = 320 - Advent.$window.scrollTop();
-		
-		if ((topSpan * 2) + Advent.$sidebar.height() < Advent.$window.height()) {
+		if ($(document).scrollTop() > 200) {
 			Advent.$sidebar.addClass("fixed")
-			Advent.$sidebar.css("top", Advent.$sidebarTop)
 		} else {
 			Advent.$sidebar.removeClass("fixed")
-			Advent.$sidebar.css("top", "320px")
+		}
+	}
+	
+	Advent.findCenterCard = function () {
+		var windowCenter = $(document).scrollTop() + ($(window).height() / 2);
+		for (var i = Advent.dateCards.length - 1; i >= 0; i --) {
+			var dateCard = Advent.dateCards[i];
+			if (dateCard.active && (dateCard.$el.offset().top < windowCenter)) {
+				return dateCard
+			}
+		}
+		return false
+	}
+	
+	Advent.setActiveSidebarItem = function () {
+		var currentCard = Advent.findCenterCard();
+		for (var i = 0; i < Advent.dateCards.length; i ++ ) {
+			if (currentCard === Advent.dateCards[i]) {
+				Advent.dateCards[i].$sidebarLink.addClass("current")
+			} else {				
+				Advent.dateCards[i].$sidebarLink.removeClass("current")
+			}
 		}
 	}
 })();

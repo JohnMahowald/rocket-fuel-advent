@@ -3,12 +3,17 @@ Background: #E2F4FD
 Tree-Blue: #66A4D9
 Soft-Blue: #AEE1F7
 Gold: #F5C64A
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /* Main Styling */
 
-body {
+html, body {
 	font-family: "Montserrat", Arial, sans-serif;
 	background-color: #E2F4FD;
+	max-width: 100% !important;
+	overflow-x: hidden !important;
 }
 
 /* Header Background */
@@ -50,7 +55,7 @@ body {
 	top: 0;
 	font-family: "Montserrat", Arial, sans-serif;	
 	text-align: center;
-	color: #66A4D9;	
+	color: #66A4D9;
 	vertical-align: center;	
 	width: 100%;
 }
@@ -78,11 +83,11 @@ body {
 .sub-banner {
 	overflow: auto;
 	background: url(../images/sub-banner.svg) no-repeat center center;
-	background-size: 450px 150px;
+	background-size: 450px 130px;
 	width: 450px;
-	height: 150px;
+	height: 130px;
 	margin: 0 auto;
-	margin-top: -125px;
+	margin-top: -115px;
 }
 
 /* Current Link Tip */
@@ -149,6 +154,7 @@ body {
 	border: 8px solid #AEE1F7;
 	height: 88px;
 	width: 88px;
+	background-size: 80px 80px;
 	border-radius: 50px;
 	z-index: 2;
 	-ms-filter: grayscale(100%);	
@@ -160,7 +166,7 @@ body {
 .flag {
 	position: relative;
 	display: block;
-	width: 380px;
+	width: 320px;
 	padding: 10px;
 	background-color: #F5C64A;
 	left: 45px;
@@ -183,35 +189,68 @@ body {
 .flag>a.learn-more {
 	position: absolute;
 	top: 0;	
-	right: 0;
+	right: 3px;
 	display: block;
-	width: 75px;
+	width: 50px;
 	height: 100%;
 	background: url(../images/learn-more.png) no-repeat center center;
-	background-size: 13px 100px;
+	background-size: 10px 80px;
+}
+
+.flag>a.learn-more:hover {
+	background-image: url(../images/learn-more-hover.png);
 }
 
 .content-wrapper {
 	border-right: 1px solid #fff;
-	width: 240px;
+	width: 210px;
 	padding-right: 20px;
 }
 
 .content-wrapper>.name {
 	font-family: "Montserrat-Bold", Arial, sans-serif;
-	font-size: 1.2em;
+	font-size: 1em;
 	color: #fff;
 }
 
 .content-wrapper>.role {
 	margin-top: 5px;
-	font-size: 1.1em;
+	font-size: 1em;
 	color: #fff;
 }
 
 .content-wrapper>.description {
 	margin-top: 5px;
-	font-size: 1em;
+	font-size: .75em;
+}
+
+.flag.left {
+	left: -275px;
+}
+
+.flag.left>a.learn-more {
+	-ms-transform: rotate(180deg);	
+	-moz-transform: rotate(180deg);	
+	-webkit-transform: rotate(180deg);	
+	transform: rotate(180deg);
+	left: 7px;
+}
+
+.flag.left>.content-wrapper {
+	border-left: 1px solid #fff;
+	border-right: none;
+	padding-left: 30px;
+}
+
+.day>.future-content {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #AEE1F7;
+	height: 80px;
+	width: 80px;
+	border-radius: 80px;
 }
 
 .day>.filter-overlay, .day>.headshot, .day>.filter {
@@ -235,7 +274,7 @@ body {
 	opacity: 0;
 }
 
-.day.active:hover>.headshot {
+.day.active:hover>.headshot, .day.active.initialize>.headshot {
 	border-color: #F5C64A;
 	-ms-filter: grayscale(0);	
 	-moz-filter: grayscale(0);	
@@ -244,7 +283,7 @@ body {
 	z-index: 100;
 }
 
-.day.active:hover>.flag {
+.day.active:hover>.flag, .day.active.initialize>.flag {
 	visibility: visible;
 	opacity: 1;
 	z-index: 80;
@@ -275,96 +314,33 @@ body {
 }
 
 /* Day Cards */
-
-
-#day-1 {
-	top: 207px;
-	left: 361px;
+#day-12 {
+	top: -1px;
+	left: 363px;
 }
 
-#day-1 .headshot, #day-1-mobile .headshot {
-	background: url(../images/headshots/day-1.jpg) no-repeat center center;
-	background-size: 80px 73px;
+#day-12 .headshot, #day-12-mobile .headshot {
+	background: url(../images/headshots/George-John.png) no-repeat center center;
+	background-size: 80px 80px;
 }
 
-#day-2 {
-	top: 370px;
-	left: 361px;
+#day-11 {
+	top: 1499px;
+	left: 425px;
 }
 
-#day-2 .headshot {
-	background: url(../images/headshots/day-2.jpg) no-repeat center center;
-	background-size: 80px 73px;
+#day-11 .headshot, #day-11-mobile .headshot {
+	background: url(../images/headshots/John-Nardone.png) no-repeat center center;
+	background-size: 80px 80px;
 }
 
-#day-3 {
-	top: 652px;
-	left: 426px;
+#day-11 .date {
+	left: 23px;
 }
 
-#day-3 .headshot {
-	background: url(../images/headshots/day-1.jpg) no-repeat center center;
-	background-size: 80px 73px;
-}
-
-#day-4 {
-	top: 714px;
-	left: 298px;
-}
-
-#day-4 .headshot {
-	background: url(../images/headshots/day-2.jpg) no-repeat center center;
-	background-size: 80px 73px;
-}
-
-#day-5 {
-	top: 775px;
-	left: 413px;
-}
-
-#day-5 .headshot {
-	background: url(../images/headshots/day-1.jpg) no-repeat center center;
-	background-size: 80px 73px;
-}
-
-#day-6 {
-	top: 901px;
-	left: 361px;
-}
-
-#day-6 .headshot {
-	background: url(../images/headshots/day-1.jpg) no-repeat center center;
-	background-size: 80px 73px;
-}
-
-#day-7 {
-	top: 1016px;
-	left: 426px;
-}
-
-#day-7 .headshot {
-	background: url(../images/headshots/day-2.jpg) no-repeat center center;
-	background-size: 80px 73px;
-}
-
-#day-8 {
-	top: 1124px;
-	left: 299px;
-}
-
-#day-8 .headshot {
-	background: url(../images/headshots/day-1.jpg) no-repeat center center;
-	background-size: 80px 73px;
-}
-
-#day-9 {
-	top: 1190px;
-	left: 426px;
-}
-
-#day-9 .headshot {
-	background: url(../images/headshots/day-2.jpg) no-repeat center center;
-	background-size: 80px 73px;
+#day-11 .future-content {
+	background: url(../images/december/dec-24.png) no-repeat center center;
+	background-size: 80px 80px;
 }
 
 #day-10 {
@@ -372,29 +348,169 @@ body {
 	left: 360px;
 }
 
-#day-10 .headshot {
-	background: url(../images/headshots/day-1.jpg) no-repeat center center;
-	background-size: 80px 73px;
+#day-10 .headshot, #day-10-mobile .headshot {
+	background: url(../images/headshots/Mark-Torrance.png) no-repeat center center;
+	background-size: 80px 80px;
 }
 
-#day-11 {
-	top: 0px;
-	left: 363px;
+#day-10 .date {
+	left: 23px;
 }
 
-#day-11 .headshot {
-	background: url(../images/headshots/day-1.jpg) no-repeat center center;
-	background-size: 80px 73px;
+#day-10 .future-content {
+	background: url(../images/december/dec-23.png) no-repeat center center;
+	background-size: 80px 80px;
 }
 
-#day-12 {
-	top: 1499px;
-	left: 425px;
+#day-9 {
+	top: 1190px;
+	left: 426px;
 }
 
-#day-12 .headshot {
-	background: url(../images/headshots/day-1.jpg) no-repeat center center;
-	background-size: 80px 73px;
+#day-9 .headshot, #day-9-mobile .headshot {
+	background: url(../images/headshots/Rhonda-Shantz.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-9 .date {
+	left: 23px;
+}
+
+#day-9 .future-content {
+	background: url(../images/december/dec-22.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-8 {
+	top: 1124px;
+	left: 299px;	
+}
+
+#day-8 .headshot, #day-8-mobile .headshot {
+	background: url(../images/headshots/Mark-Prior.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-8 .future-content {
+	background: url(../images/december/dec-19.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-7 {
+	top: 1016px;
+	left: 426px;	
+}
+
+#day-7 .flag {
+	width: 260px;
+}
+
+#day-7 .content-wrapper {
+	width: 155px;
+}
+
+#day-7 .headshot, #day-7-mobile .headshot {
+	background: url(../images/headshots/Doug-Miller.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-7 .future-content {
+	background: url(../images/december/dec-18.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-6 {
+	top: 901px;
+	left: 361px;
+}
+
+#day-6 .headshot, #day-6-mobile .headshot {
+	background: url(../images/headshots/Eric-Porres.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-6 .future-content {
+	background: url(../images/december/dec-17.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-5 {
+	top: 775px;
+	left: 413px;
+}
+
+#day-5 .headshot, #day-5-mobile .headshot {
+	background: url(../images/headshots/Shobhana-Ahluwalia.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-5 .future-content {
+	background: url(../images/december/dec-16.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-4 {
+	top: 714px;
+	left: 298px;
+}
+
+#day-4 .headshot, #day-4-mobile .headshot {
+	background: url(../images/headshots/Bridget-Bidlack.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-4 .future-content {
+	background: url(../images/december/dec-15.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-3 {
+	top: 652px;
+	left: 426px;
+}
+
+#day-3 .headshot, #day-3-mobile .headshot {
+	background: url(../images/headshots/Dominic-Trigg.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-3 .future-content {
+	background: url(../images/december/dec-12.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-2 {
+	top: 370px;
+	left: 361px;
+}
+
+#day-2 .headshot, #day-2-mobile .headshot {
+	background: url(../images/headshots/Abhinav-Gupta.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-2 .date {
+	left: 30px;
+}
+
+#day-2 .future-content {
+	background: url(../images/december/dec-11.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-1 {
+	top: 207px;
+	left: 361px;
+}
+
+#day-1 .headshot, #day-1-mobile .headshot {
+	background: url(../images/headshots/Richard-Frankel.png) no-repeat center center;
+	background-size: 80px 80px;
+}
+
+#day-1 .future-content {
+	background: url(../images/december/dec-10.png) no-repeat center center;
+	background-size: 80px 80px;
 }
 /* Sidebar */
 
@@ -402,12 +518,16 @@ body {
 	position: absolute;
 	right: 10%;
 	top: 340px;
-	z-index: -1;
+	display: none;
+}
+
+.sidebar.shown {
+	display: block;
 }
 
 .sidebar.fixed {
 	position: fixed;
-	top: 150px;
+	top: 100px;
 }
 
 .sidebar>li {
@@ -435,23 +555,22 @@ body {
 /* Background Trees */
 
 .background-tree {
+	position: absolute;	
 	z-index: -1;
 	height: 900px;
-	width: 500px;
-	position: absolute;
+	width: 394px;
+	top: 800px;
 }
 
 .background-tree.dark {
 	background: url(../images/background-tree-dark.svg) no-repeat center top;
-	background-size: cover;
-	bottom: -1130px;
+	background-size: 420px 900px;
 }
 
 .background-tree.light {
 	background: url(../images/background-tree-light.svg) no-repeat center top;
-	background-size: cover;
+	background-size: 420px 900px;
 	z-index: -2;
-	bottom: -1150px;
 }
 
 #tree-1 {
@@ -523,48 +642,49 @@ body {
 
 /* Mobile View */
 
-@media all and (max-width: 480px) {
+@media only screen and (max-width: 720px) {
 	.banners {
-		position: fixed;
+		position: absolute;
 		top: 0;
 		text-align: center;
 		color: #66A4D9;	
 		vertical-align: center;	
 		width: 100%;
+		background-color: none !important;
 	}
 
 	.main-banner {
 		background: url(../images/main-banner.svg) no-repeat center;
 		background-size: cover;
-		width: 300px;
-		height: 150px;
+		width: 420px;
+		height: 200px;
 		margin: 0 auto;
 	}
 
 	.main-banner>h1 {
 		font-family: "Montserrat-Bold", Arial, sans-serif;
-		font-size: 1.7em;
-		margin-top: 40px;
+		font-size: 1.9em;
+		margin-top: 50px;
 	}
 
 	.main-banner>h2 {
-		font-size: 1.4em;
+		font-size: 1.7em;
 	}
 
 	.sub-banner {
 		overflow: auto;
 		background: url(../images/sub-banner.svg) no-repeat center;
-		background-size: 300px 90px;
-		width: 300px;
+		background-size: 350px 90px;
+		width: 350px;
 		height: 90px;
 		margin: 0 auto;
-		margin-top: -40px;
+		margin-top: -70px;
 	}	
 	
 	/* Sidebar */
 	
 	.sidebar {
-		display: none;
+		display: none !important;
 	}
 	
 	/* Background-trees */
@@ -587,6 +707,7 @@ body {
 	#main-tree {
 		position: absolute;
 		top: 250px;
+		width: 100%;
 	}
 	
 	/* Footer */
@@ -594,11 +715,12 @@ body {
 	.fixed-footer {
 		position: fixed;
 		bottom: 0;
-		height: 20px;
+		height: 60px;
 		width: 100%;
-		background-color: #E2F4FD;
-		box-shadow: 0 0 6px 8px rgba(0, 0, 0, .4);
-		z-index: 10;
+		-ms-box-shadow: 0 0 6px 8px rgba(0, 0, 0, .4);	
+		-moz-box-shadow: 0 0 6px 8px rgba(0, 0, 0, .4);	
+		-webkit-box-shadow: 0 0 6px 8px rgba(0, 0, 0, .4);	
+		box-shadow: 0 0 6px 8px rgba(0, 0, 0, .4);		
 	}
 
 	.fixed-footer.pattern-solid {
@@ -608,8 +730,7 @@ body {
 
 	.fixed-footer>.pattern-outline {
 		background-position: center;
-		height: 20px;
-		width: 100%;
+		height: 60px;
 	}
 
 	.pattern-outline {
@@ -618,8 +739,8 @@ body {
 
 	.pattern-outline>a {
 		background: url(../images/rocket-footer.svg) no-repeat center center;
-		background-size: cover;
-		height: 20px;
+		background-size: 300px 30px;
+		height: 60px;
 		width: 300px;
 		display: block;
 		margin: 0 auto;
@@ -649,21 +770,33 @@ body {
 		display: none;
 	}
 	
+	.mobile-close {
+		background: url(../images/mobile-close.svg) no-repeat center center;
+		background-size: 30px 30px;
+		height: 30px;
+		width: 30px;
+		border-radius: 60px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	
+	.mobile-close:hover, .mobile-active {
+		background-image: url(../images/mobile-close-hover.svg);
+	}
+	
 	.mobile-view .headshot {
 		border: none;
 		height: 100px;
 		width: 100px;
 		border-radius: 90px;
 		z-index: 2;
+		-ms-filter: none;
+		-moz-filter: none;
 		-webkit-filter: none;
-		filter: none;	
+		filter: none;
 		margin: 0 auto;
-		margin-top: 10px;
-	}
-	
-	#day-1-mobile .headshot {
-		height: 100px;
-		width: 100px;
+		margin-top: 80px;
 	}
 	
 	.mobile-content {
@@ -696,6 +829,7 @@ body {
 		background-size: cover;
 		height: 30px;
 		width: 20px;
+		margin-top: 20px;
 	}
 	
 	.learn-more {
@@ -707,5 +841,264 @@ body {
 		color: #fff;
 		padding: 10px 0;
 		text-decoration: none;
+	}
+	
+	#day-1 {
+		left: 50%;
+		-ms-transform: translateX(-50%);	
+		-moz-transform: translateX(-50%);	
+		-webkit-transform: translateX(-50%);		
+		transform: translateX(-50%);
+	}
+	
+	#day-2 {
+		left: 42%;
+	}
+	
+	#day-3 {
+		left: 54%;		
+	}
+	
+	#day-4 {
+		left: 33%;		
+	}
+	
+	#day-5 {
+		left: 50%;		
+	}
+	
+	#day-6 {
+		left: 43%;
+	}
+	
+	#day-7 {
+		left: 53%;
+	}
+	
+	#day-8 {
+		left: 35%;
+	}
+	
+	#day-9 {
+		left: 55%;		
+	}
+	
+	#day-10 {
+		left: 42%;		
+	}
+	
+	#day-11 {
+		left: 54%;
+	}
+	
+	#day-12 {
+		left: 50%;
+		-ms-transform: translateX(-49%);	
+		-moz-transform: translateX(-49%);	
+		-webkit-transform: translateX(-49%);		
+		transform: translateX(-49%);
+	}
+	
+	.fixed-footer {
+		position: fixed;
+		bottom: 0;
+		height: 45px;
+		z-index: 10;
+		-ms-box-shadow: 0 0 6px 8px rgba(0, 0, 0, .4);	
+		-moz-box-shadow: 0 0 6px 8px rgba(0, 0, 0, .4);	
+		-webkit-box-shadow: 0 0 6px 8px rgba(0, 0, 0, .4);	
+		box-shadow: 0 0 6px 8px rgba(0, 0, 0, .4);		
+	}
+
+	.fixed-footer.pattern-solid {
+		z-index: 11;
+		background-position: center;
+	}
+
+	.fixed-footer>.pattern-outline {
+		background-position: center;
+		height: 45px;
+		width: 100%;
+	}
+
+	.pattern-outline {
+		overflow: auto;
+	}
+
+	.pattern-outline>a {
+		background: url(../images/rocket-footer.svg) no-repeat center center;
+		background-size: cover;
+		height: 30px;
+		width: 300px;
+		display: block;
+		margin: 15px auto;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#day-1 {
+		left: 50%;
+	}
+	
+	#day-2 {
+		left: 40%;
+	}
+	
+	#day-3 {
+		left: 54%;		
+	}
+	
+	#day-4 {
+		left: 29%;
+	}
+	
+	#day-5 {
+		left: 50%;
+	}
+	
+	#day-6 {
+		left: 41%;
+	}
+	
+	#day-7 {
+		left: 53%;
+	}
+	
+	#day-8 {
+		left: 30%;
+	}
+	
+	#day-9 {
+		left: 55%;		
+	}
+	
+	#day-10 {
+		left: 42%;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	
+	/* Headers */
+	.main-banner {
+		background: url(../images/main-banner.svg) no-repeat center;
+		background-size: cover;
+		width: 300px;
+		height: 150px;
+		margin: 0 auto;
+	}
+
+	.main-banner>h1 {
+		font-family: "Montserrat-Bold", Arial, sans-serif;
+		font-size: 1.6em;
+		margin-top: 40px;
+	}
+
+	.main-banner>h2 {
+		font-size: 1.3em;
+	}
+
+	.sub-banner {
+		overflow: auto;
+		background: url(../images/sub-banner.svg) no-repeat center;
+		background-size: 280px 100px;
+		height: 100px;
+		width: 280px;
+		margin: 0 auto;
+		margin-top: -45px;
+	}	
+	
+	/* Current Tip */
+	
+	.current-tip {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		margin-top: 180px;
+	}
+	
+	/* Main Tree */
+	
+	#main-tree {
+		position: absolute;
+		top: 230px;
+		width: 100%;
+	}
+	
+	/* Footer */
+	
+	.fixed-footer {
+		position: fixed;
+		bottom: 0;
+		height: 45px;
+		width: 100%;
+	}
+
+	.fixed-footer.pattern-solid {
+		z-index: 11;
+		background-position: center;
+	}
+
+	.fixed-footer>.pattern-outline {
+		background-position: center;
+		height: 45px;		
+	}
+
+	.pattern-outline {
+		overflow: auto;
+	}
+
+	.pattern-outline>a {
+		background: url(../images/rocket-footer.svg) no-repeat center center;
+		background-size: 280px 30px;
+		height: 30px;
+		width: 280px;
+		display: block;
+		margin: 0 auto;
+		margin-top: 2px;
+	}	
+	
+	#day-1 {
+		left: 50%;
+	}
+	
+	#day-2 {
+		left: 35%;
+	}
+	
+	#day-3 {
+		left: 54%;		
+	}
+	
+	#day-4 {
+		left: 19%;
+	}
+	
+	#day-5 {
+		left: 50%;
+	}
+	
+	#day-6 {
+		left: 37%;
+	}
+	
+	#day-7 {
+		left: 53%;
+	}
+	
+	#day-8 {
+		left: 20%;
+	}
+	
+	#day-9 {
+		left: 53%;		
+	}
+	
+	#day-10 {
+		left: 37%;
+	}
+	
+	#day-11 {
+		left: 55%;
 	}
 }

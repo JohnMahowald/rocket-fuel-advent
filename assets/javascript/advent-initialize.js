@@ -13,47 +13,47 @@
 	Advent.$window = $(window)
 	Advent.$mainTree = $("#main-tree");
 	Advent.$sidebar = $('.sidebar');
+	Advent.$lastSidebarItem = $(".sidebar>li:last-of-type");
+	Advent.$footer = $('.fixed-footer');
 	Advent.$days = $('.day');
 	Advent.$december = $('.december');
-	Advent.today = new Date();
 	Advent.dateCards = [];
-	Advent.finalDay = 23;
 	Advent.dissableScroll = false;
 	
-	// Initialize parallax
-	$.stellar();
+	// Date Variables
+	Advent.timeOffset = 3 * 60 * 60 * 1000;
+	Advent.today = new Date();	
+	Advent.localOffset = Advent.today.getTimezoneOffset() * 60 * 1000
 	
-	// Arches the text "December" in the tree	
-	setTimeout( function () {
-		$('.december').arctext({radius: 33})
-	}, 0);
+	$(document).bind("mobileinit", function() {
+	  $.mobile.ajaxEnabled = false;
+	});
+	
+	// Initialize parallax unless mobile
+	if ($(window).width() >= 720) { $.stellar() };
 	
 	// Instantiate Date Cards
 	Advent.$days.each( function (idx, el) {
-		Advent.dateCards.push(Advent.createCardFromEl(el))
+		Advent.dateCards.push(Advent.createCardFromEl(el));
 	});
 	
 	// Allows hover state for active cards
-	Advent.setActiveDateCards()
+	Advent.setActiveDateCards();	
 	
 	// Changes card view based on date
 	Advent.dateCards.forEach ( function (card) { card.setActiveCard()	});
-	
-	// Sets the menu based on past, present, or future
-	Advent.setMenu();
-	
-	// Set Today's Tip
 	Advent.setTodaysTip();
-	
-	// Hide Today's tip on last day
 	Advent.maybeHideTodaysTip();
+	Advent.setInitialize();
 	
-	// Register Event Listeners
-	Advent.$window.scroll( Advent.maybeScroll );
-	Advent.$currentTip.click( Advent.scrollToElement );
-	Advent.$sidebar.find("li").click( Advent.scrollToElement )
-	Advent.$window.scroll( Advent.maybeFixSidebar );
-	Advent.$window.scroll( Advent.setCurrentTipOpacity )
-	Advent.$window.scroll( Advent.setActiveSidebarItem )
-  $(window).resize( function() { location.reload() })	
+	setTimeout( function () {
+		Advent.$currentTip.click( Advent.scrollToElement );
+		Advent.$window.scroll( Advent.setCurrentTipOpacity );
+		Advent.setMobileClickHandlers();
+		Advent.scrollOnLoad();
+		$(".day.active").mouseenter( Advent.removeInitialize );
+		$('.flag').click( Advent.goToTooltipLink );
+		$('.december').arctext({radius: 33})		
+	}, 0)
+	
 })();

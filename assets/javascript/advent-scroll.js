@@ -6,27 +6,14 @@
 	}
 	
 	var Advent = window.Advent;
-	
+
 	Advent.scrollToElement = function (e) {
 		e.preventDefault
 		var target = $(e.currentTarget).data().target;
 		var targetHeight = $(target).offset().top - ($(window).height() / 3);
 		$.scrollTo(targetHeight, 400)
 	}
-	
-	Advent.setMenu = function () {
-		Advent.dateCards.forEach( function (card, idx) {			
-			if (card.today) {
-				card.$sidebarLink.removeClass().addClass("today");
-				return true
-			} else if (card.active) {
-				card.$sidebarLink.removeClass().addClass("active");
-				return true
-			}
-			return false
-		});
-	}
-	
+		
 	Advent.setCurrentTipOpacity = function () {	
 		var tipTop = Advent.$currentTip.offset().top;
 		var treeTop = Advent.$mainTree.offset().top;
@@ -39,33 +26,17 @@
 		)
 	}
 	
-	Advent.maybeFixSidebar = function () {
-		if ($(document).scrollTop() > 200) {
-			Advent.$sidebar.addClass("fixed")
-		} else {
-			Advent.$sidebar.removeClass("fixed")
-		}
+	Advent.removeInitialize = function () {
+		$('.day').removeClass("initialize")
 	}
 	
-	Advent.findCenterCard = function () {
-		var windowCenter = $(document).scrollTop() + ($(window).height() / 2);
-		for (var i = Advent.dateCards.length - 1; i >= 0; i --) {
-			var dateCard = Advent.dateCards[i];
-			if (dateCard.active && (dateCard.$el.offset().top < windowCenter)) {
-				return dateCard
-			}
+	Advent.setInitialize = function () {
+		if ($(window).width() > 720) {
+			$("#day-" + Advent.adjustedDate()).addClass("initialize")	
 		}
-		return false
 	}
-	
-	Advent.setActiveSidebarItem = function () {
-		var currentCard = Advent.findCenterCard();
-		for (var i = 0; i < Advent.dateCards.length; i ++ ) {
-			if (currentCard === Advent.dateCards[i]) {
-				Advent.dateCards[i].$sidebarLink.addClass("current")
-			} else {				
-				Advent.dateCards[i].$sidebarLink.removeClass("current")
-			}
-		}
+		
+	Advent.scrollOnLoad = function () {
+		$.scrollTo($('#day-' + Advent.adjustedDate()).offset().top - 50, 600)
 	}
 })();

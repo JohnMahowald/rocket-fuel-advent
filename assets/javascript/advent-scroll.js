@@ -8,16 +8,20 @@
 	var Advent = window.Advent;
 
 	Advent.scrollToElement = function (e) {
-		e.preventDefault
+		e.preventDefault();
 		var target = $(e.currentTarget).data().target;
 		var targetHeight = $(target).offset().top - ($(window).height() / 3);
 		$.scrollTo(targetHeight, 400)
 	}
-		
-	Advent.setCurrentTipOpacity = function () {	
+	
+	Advent.currentTipOffset = function () {
 		var tipTop = Advent.$currentTip.offset().top;
 		var treeTop = Advent.$mainTree.offset().top;
-		var adjustedDiff = 28 - (treeTop - tipTop);
+		return 28 - (treeTop - tipTop);
+	}
+		
+	Advent.setCurrentTipOpacity = function () {
+		var adjustedDiff = Advent.currentTipOffset();
 		
 		if (adjustedDiff <= 0) {
 			Advent.$currentTip.css("opacity", -1 * (adjustedDiff / 10))
@@ -31,9 +35,7 @@
 	}
 	
 	Advent.setInitialize = function () {
-		if ($(window).width() > 720) {
-			$("#day-" + Advent.adjustedDate()).addClass("initialize")	
-		}
+		$("#day-" + Advent.adjustedDate()).addClass("initialize")
 	}
 		
 	Advent.scrollOnLoad = function () {

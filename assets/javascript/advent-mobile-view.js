@@ -8,16 +8,21 @@
 	
 	var Advent = window.Advent;
 	
-	$('body').on({
-		'mousewheel scrollstart': function (e) {
-			if (Advent.dissableScroll && ($(window).width() < 500)) {
-				e.preventDefault();
-				e.stopPropagation();	
-			}
+	Advent.maybePreventScroll = function (e) {
+		if (Advent.dissableScroll && ($(window).width() < 720)) {
+			e.preventDefault();
+			e.stopPropagation();
 		}
-	});
+	}
 	
+	Advent.closeMobileView = function (e) {
+    e.preventDefault();
+		Advent.dissableScroll = false;
+    $(e.currentTarget).removeClass('active')
+	}
 	
+	$('body').on({ 'mousewheel': Advent.maybePreventScroll });
+  $('.mobile-view').click( Advent.closeMobileView )	
 	$('.mobile-close').on('touchstart', function (e) {
 		$(e.currentTarget).addClass("active")
 	})
@@ -25,24 +30,17 @@
 	Advent.setMobileClickHandlers = function () {
 		$('.day.active').click( function (e) {
 			
-			if ($(window).width() > 700) { return }
+			if ($(window).width() > 720) { return }
 			
 			var target = $(e.currentTarget).data().mobileTarget;
+			
 			$(target)
 				.css("top", $(document).scrollTop())
-				.addClass("active")
 				.css("height", $(window).height())
-				.css("width", $(window).width())
+				.css("width", $(window).width())			
+				.addClass("active")
 			
-			if ($(window).width() < 500) {
-				Advent.dissableScroll = true;
-			}
+			Advent.dissableScroll = true;
 		})
 	}
-	
-  $('.mobile-view').click( function (e) {
-    e.preventDefault
-		Advent.dissableScroll = false;
-    $(e.currentTarget).removeClass('active')
-  })
 })();

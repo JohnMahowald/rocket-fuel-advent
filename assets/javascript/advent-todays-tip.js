@@ -8,23 +8,20 @@
 	
 	var Advent = window.Advent;
 	
-	Advent.maybeHideTodaysTip = function () {
-		if (Advent.today.getDate() >= 25) {
-			var windowWidth = Advent.$window.width();
-			var offset = 0;
-			if (windowWidth < 420) { 
-				offset = 190 
-			} else if (windowWidth < 720){
-				offset = 200
-			} else {
-				offset = 290
-			};
-			
-			Advent.$mainTree.css("top", offset);
-			Advent.$currentTip.css("display", "none");
-			return true;
+	Advent.getTipOffset = function () {
+		if (Advent.$window.width() < 420) { 
+			return 190 
+		} else if (Advent.$window.width() < 720){
+			return 200
+		} else {
+			return 290
 		}
-		return false;
+	}
+	
+	Advent.maybeHideTodaysTip = function () {
+		if (Advent.today.getDate() < 25) { return false }
+		Advent.$mainTree.css("top", Advent.getTipOffset());
+		Advent.$currentTip.css("display", "none");
 	}
 	
 	Advent.setTodaysTip = function () {
@@ -32,6 +29,7 @@
 	}
 	
 	Advent.goToTooltipLink = function (e) {
+		e.preventDefault();
 		var $link = $(e.currentTarget).find(".learn-more");
 		window.open($link.attr("href"), '_blank')
 	}

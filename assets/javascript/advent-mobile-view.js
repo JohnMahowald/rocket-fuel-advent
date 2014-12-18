@@ -16,13 +16,12 @@
 	}
 	
 	Advent.closeMobileView = function (e) {
-    e.preventDefault();
 		Advent.dissableScroll = false;
-    $(e.currentTarget).removeClass('active')
+		$(e.currentTarget).removeClass('active')
 	}
 	
 	$('body').on({ 'mousewheel': Advent.maybePreventScroll });
-  $('.mobile-view').click( Advent.closeMobileView )	
+	$('.mobile-view').click( Advent.closeMobileView )	
 	$('.mobile-close').on('touchstart', function (e) {
 		$(e.currentTarget).addClass("active")
 	})
